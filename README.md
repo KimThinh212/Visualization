@@ -1,10 +1,10 @@
-Motor vehicle collisions reported by the New York City Police Department from January-August 2020. Each record represents an individual collision, including the date, time and location of the accident (borough, zip code, street name, latitude/longitude), vehicles and victims involved, and contributing factors.
+Các vụ tai nạn giao thông do Sở Cảnh sát Thành phố New York báo cáo từ tháng 1 đến tháng 8 năm 2020. Mỗi bản ghi đại diện cho một vụ tai nạn riêng lẻ, bao gồm ngày, giờ và địa điểm xảy ra tai nạn (quận, mã bưu chính, tên đường, vĩ độ/kinh độ), các phương tiện và nạn nhân liên quan, và các yếu tố góp phần gây ra tai nạn.
 
-Recommended Analysis
-Compare the % of total accidents by month. Do you notice any seasonal patterns?
+Phân tích được đề xuất
+Hãy so sánh tỷ lệ phần trăm tổng số tai nạn theo từng tháng. Bạn có nhận thấy bất kỳ xu hướng theo mùa nào không?
 
-Break down accident frequency by day of week and hour of day. Based on this data, when do accidents occur most frequently?
+Phân tích tần suất tai nạn theo ngày trong tuần và giờ trong ngày. Dựa trên dữ liệu này, tai nạn xảy ra thường xuyên nhất vào thời điểm nào?
 
-On which particular street were the most accidents reported? What does that represent as a % of all reported accidents
+Trên tuyến phố nào có số vụ tai nạn được báo cáo nhiều nhất? Tỷ lệ đó chiếm bao nhiêu phần trăm trong tổng số vụ tai nạn được báo cáo?
 
-What was the most common contributing factor for the accidents reported in this sample (based on Vehicle 1)? What about for fatal accidents specifically?
+Yếu tố nào thường xuyên gây ra các tai nạn được báo cáo trong mẫu này (dựa trên Xe 1)? Còn đối với các tai nạn gây tử vong thì sao?
