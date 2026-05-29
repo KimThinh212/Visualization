@@ -1,0 +1,5 @@
+# B? qua toàn b? file trong thu m?c data
+data/*
+
+# Ngo?i l?: Không b? qua file README.md trong thu m?c data
+!data/README.md
