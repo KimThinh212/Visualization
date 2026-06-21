@@ -10,7 +10,7 @@ Dự án được thực hiện bởi nhóm sinh viên:
 
 ## 📌 Bảng Tổng Quan Dự Án (Project Summary)
 
-Dưới đây là tóm tắt nhanh về 5 notebook chính trong kho lưu trữ này:
+Dưới đây là tóm tắt nhanh về các notebook chính trong kho lưu trữ này:
 
 | Tên File Notebook | Lĩnh Vực / Chủ Đề | Thư Viện Trực Quan | Mô Hình Machine Learning | Biến Mục Tiêu (Target) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -18,7 +18,6 @@ Dưới đây là tóm tắt nhanh về 5 notebook chính trong kho lưu trữ n
 | [Housing_Affordability_Analysis_and_Prediction.ipynb](notebooks/Housing_Affordability_Analysis_and_Prediction.ipynb) | Kinh tế vĩ mô (Housing Affordability) | Matplotlib, Seaborn | Ridge, Random Forest, HistGradientBoostingRegressor | Chỉ số khả năng chi trả nhà ở (Housing Affordability Index) |
 | [Rainfall_Prediction.ipynb](notebooks/Rainfall_Prediction.ipynb) | Khí tượng học (Rainfall in UP, India) | Matplotlib, Seaborn | Random Forest, XGBoost, LightGBM | `PRECTOTCORR` (Lượng mưa) & Cảnh báo mưa nhị phân |
 | [Student_Lifestyle_and_Stress_Prediction.ipynb](notebooks/Student_Lifestyle_and_Stress_Prediction.ipynb) | Giáo dục & Tâm lý học (Student Lifestyle) | Matplotlib, Seaborn | Logistic Regression, Random Forest, XGBoost, Stacking Classifier | Mức độ căng thẳng (Stress Level) |
-| [Plotly_Basics1.ipynb](notebooks/Plotly_Basics1.ipynb) | Hướng dẫn Trực quan hóa (Plotly Guide) | Plotly Express, Plotly Graph Objects | *N/A (Chỉ trực quan hóa dữ liệu)* | *N/A* |
 
 ---
 
@@ -53,10 +52,6 @@ Dưới đây là tóm tắt nhanh về 5 notebook chính trong kho lưu trữ n
     *   Áp dụng kỹ thuật cân bằng dữ liệu `SMOTE` (Synthetic Minority Over-sampling Technique) giải quyết vấn đề mất cân bằng giữa các lớp stress.
     *   Mô hình Stacked Classifier kết hợp Logistic Regression, Random Forest và XGBoost để tối ưu hóa chỉ số F1-Score và ROC-AUC.
 
-### 5. 📊 Cẩm Nang Trực Quan Hóa Tương Tác Với Plotly
-*   **Mục tiêu**: Tài liệu hướng dẫn sử dụng thư viện Plotly để xây dựng biểu đồ tương tác cao.
-*   **Các biểu đồ minh họa**: Scatter Plot (Biểu đồ phân tán), Line Plot (Biểu đồ đường), Bar Plot (Biểu đồ cột), Histogram (Biểu đồ phân phối), Bubble Plot (Biểu đồ bong bóng), Pie Plot (Biểu đồ tròn), và Sunburst Charts (Biểu đồ hướng dương phân tầng).
-
 ---
 
 ## 🛠️ Công Nghệ & Thư Viện Sử Dụng (Tech Stack)
@@ -64,7 +59,7 @@ Dưới đây là tóm tắt nhanh về 5 notebook chính trong kho lưu trữ n
 Dự án được xây dựng trên ngôn ngữ **Python 3** và sử dụng các thư viện cốt lõi sau:
 
 *   **Xử lý dữ liệu**: `pandas`, `numpy`
-*   **Trực quan hóa**: `matplotlib`, `seaborn`, `plotly`
+*   **Trực quan hóa**: `matplotlib`, `seaborn`
 *   **Học máy & Tiền xử lý**: `scikit-learn` (StandardScaler, RobustScaler, KNNImputer, StackingClassifier)
 *   **Thuật toán Boosting mạnh mẽ**: `xgboost`, `lightgbm`, `imbalanced-learn` (SMOTE)
 
@@ -94,7 +89,7 @@ Dự án được xây dựng trên ngôn ngữ **Python 3** và sử dụng cá
 
 3. **Cài đặt các thư viện cần thiết**:
    ```bash
-   pip install pandas numpy matplotlib seaborn plotly scikit-learn xgboost lightgbm imbalanced-learn notebook
+   pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm imbalanced-learn notebook
    ```
 
 4. **Khởi chạy Jupyter Notebook**:
