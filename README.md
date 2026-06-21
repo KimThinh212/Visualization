@@ -1,11 +1,10 @@
-# 📊 Data Visualization & Machine Learning Notebooks
+# 📊 Data Visualization Notebooks
 
-Chào mừng bạn đến với kho lưu trữ các dự án Trực quan hóa dữ liệu (Data Visualization) và Học máy (Machine Learning). Đây là tập hợp các nghiên cứu chuyên sâu về phân tích xu hướng, khám phá dữ liệu (EDA) và xây dựng mô hình dự báo trên nhiều lĩnh vực thực tiễn khác nhau như điện ảnh, kinh tế, khí tượng học và giáo dục.
+Chào mừng bạn đến với kho lưu trữ các dự án Trực quan hóa dữ liệu (Data Visualization) và kết hợp Học máy (Machine Learning). Đây là tập hợp các nghiên cứu chuyên sâu về phân tích xu hướng, khám phá dữ liệu (EDA) và xây dựng mô hình dự báo trên nhiều lĩnh vực thực tiễn khác nhau như điện ảnh, kinh tế, khí tượng học và giáo dục.
 
-Dự án được thực hiện bởi nhóm sinh viên lớp Trực quan hóa dữ liệu (Chiều Thứ 7):
+Dự án được thực hiện bởi nhóm sinh viên:
 *   **Võ Bạch Kim Thịnh** (MSSV: 2045230096)
-*   **Phan Trọng Nguyên** (MSSV: 2045230068)
-*   **Lê Kim Ngân** (MSSV: 2045230067)
+
 
 ---
 
