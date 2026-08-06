@@ -9,7 +9,7 @@ Dự án được thực hiện bởi:
 
 ## 📌 Bảng Tổng Quan Dự Án (Project Summary)
 
-Dưới đây là danh mục 6 notebook chính trong kho lưu trữ này:
+Dưới đây là danh mục 8 notebook chính trong kho lưu trữ này:
 
 | Tên File Notebook | Lĩnh Vực / Chủ Đề | Thư Viện Trực Quan | Kỹ Thuật & Mô Hình Machine/Deep Learning | Biến Mục Tiêu (Target) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -19,6 +19,8 @@ Dưới đây là danh mục 6 notebook chính trong kho lưu trữ này:
 | [Rainfall_Prediction.ipynb](notebooks/Rainfall_Prediction.ipynb) | Khí tượng học (Rainfall in UP, India) <br> [🔗 Kaggle Dataset](https://www.kaggle.com/datasets/rupsarroy/rainfall-dataset-uttar-pradesh-20052025) | Matplotlib, Seaborn | Random Forest, XGBoost, LightGBM, Target Encoding, Phân loại & Hồi quy song song | `PRECTOTCORR` (Lượng mưa) & Cảnh báo mưa nhị phân |
 | [Student_Lifestyle_and_Stress_Prediction.ipynb](notebooks/Student_Lifestyle_and_Stress_Prediction.ipynb) | Giáo dục & Tâm lý (Student Lifestyle) <br> [🔗 Kaggle Dataset](https://www.kaggle.com/datasets/rxnach/student-lifestyle-and-stress-dataset) | Matplotlib, Seaborn | KNNImputer, Ordinal Encoding, SMOTE, Stacking Classifier (Logistic Regression, RF, XGBoost) | Mức độ căng thẳng (Stress Level) |
 | [TMDB_Top_10,000_Movies.ipynb](notebooks/TMDB_Top_10,000_Movies.ipynb) | Điện ảnh (TMDB Top 10k Movies) <br> [🔗 Kaggle Dataset](https://www.kaggle.com/datasets/siddharthbhakta/tmdb-top-10000-movies-updated-2026) | Matplotlib, Seaborn | Linear Regression, Ridge, Random Forest, Gradient Boosting, One-way ANOVA, IQR Outlier Detection | `vote_average` (Dự đoán điểm phim) |
+| [Tesla_Stock_Forecasting_&_Risk_Analysis.ipynb](notebooks/Tesla_Stock_Forecasting_%26_Risk_Analysis.ipynb) | Tài chính (Tesla Stock Data) <br> [🔗 Kaggle Dataset](https://www.kaggle.com/datasets/varpit94/tesla-stock-data-updated-till-28jun2021) | Matplotlib, Seaborn | **Học máy**: Linear Regression, Random Forest, Gradient Boosting, XGBoost, ARIMA. <br>**Học sâu**: Stacked LSTM (Keras/TF). | `Close` (Giá đóng cửa ngày tiếp theo) |
+| [College_Majors__2026_Earnings_Debt_Jobs_AI.ipynb](notebooks/College_Majors__2026_Earnings_Debt_Jobs_AI.ipynb) | Giáo dục (US College Majors) <br> [🔗 Kaggle Dataset](https://www.kaggle.com/datasets/kylefengkfeng209/college-majors-2026-earnings-debt-jobs-ai) | Matplotlib, Seaborn, Plotly | **Học máy**: Ridge, Random Forest, Gradient Boosting, XGBoost, LightGBM, Logistic Regression, Kruskal-Wallis. <br>**Học sâu**: Tabular MLP (PyTorch). | `median_earnings_4yr_usd` (Hồi quy), High-Debt Risk (Phân loại nhị phân), Growth Trajectory (Đa lớp) |
 
 ---
 
@@ -81,6 +83,28 @@ Dưới đây là danh mục 6 notebook chính trong kho lưu trữ này:
         *   Tiến hành kiểm định giả thuyết **One-way ANOVA** độc lập nhằm kiểm nghiệm sự ảnh hưởng của ngôn ngữ gốc đến điểm đánh giá chất lượng phim trung bình (`vote_average`).
     *   **Mô hình hóa**: Chia tập dữ liệu, chuẩn hóa đặc trưng số bằng `StandardScaler`, mã hóa One-Hot cho dữ liệu phân loại. So sánh hiệu năng của 4 mô hình Hồi quy: Linear Regression, Ridge, Random Forest và Gradient Boosting.
 
+### 7. 📈 Dự Báo & Phân Tích Rủi Ro Cổ Phiếu Tesla
+*   **Mục tiêu**: Phân tích lịch sử giao dịch cổ phiếu Tesla để nhận diện các vùng rủi ro, biên độ biến động và xây dựng mô hình dự báo giá đóng cửa của phiên tiếp theo.
+*   **Nguồn dữ liệu (Kaggle)**: [Tesla Stock Data](https://www.kaggle.com/datasets/varpit94/tesla-stock-data-updated-till-28jun2021)
+*   **Tiến trình thực hiện**:
+    *   **EDA & Kỹ thuật chỉ báo**: Phân tích tương quan giá - khối lượng giao dịch, tính toán tỷ suất sinh lời hàng ngày để xác định rủi ro và các chỉ số kỹ thuật xu hướng ngắn/dài hạn (MA5, MA20).
+    *   **Hồi quy Học máy**: Dự đoán giá đóng cửa tiếp theo bằng Linear Regression làm mốc cơ sở (baseline), so sánh với Random Forest, Gradient Boosting và XGBoost.
+    *   **Dự báo chuỗi thời gian đơn biến**: Triển khai thuật toán **Auto-ARIMA** tự động dò tìm tham số (p, d, q) tối ưu dựa trên AIC.
+    *   **Học sâu LSTM**: Áp dụng chuẩn hóa `MinMaxScaler` và kỹ thuật cửa sổ trượt (look_back=60 ngày). Huấn luyện mạng Stacked LSTM (2 tầng LSTM 128 và 64 đơn vị, kết hợp Dropout và cơ chế dừng sớm EarlyStopping). Đo lường hiệu năng tổng hợp qua MAE, RMSE và MAPE.
+
+### 8. 🎓 Phân Tích Giáo Dục: Thu Nhập, Nợ & Tác Động Của AI Đối Với Các Ngành Học Mỹ (2026)
+*   **Mục tiêu**: Nghiên cứu sự phân hóa kinh tế giữa các ngành học tại Hoa Kỳ năm 2026, đánh giá áp lực nợ nần của sinh viên và đo lường mức độ thâm nhập cũng như ảnh hưởng của AI tới thị trường lao động.
+*   **Nguồn dữ liệu (Kaggle)**: [US College Majors 2026: Earnings, Debt, Jobs & AI Impact](https://www.kaggle.com/datasets/kylefengkfeng209/college-majors-2026-earnings-debt-jobs-ai)
+*   **Tiến trình thực hiện**:
+    *   **Xử lý dữ liệu MNAR (Missing Not At Random)**: Phân tích cơ chế dữ liệu thiếu do các quy định bảo mật của College Scorecard thuộc Bộ Giáo dục Mỹ.
+    *   **EDA chuyên sâu (10 Biểu đồ)**: Tương quan Spearman, phân bố thu nhập (phân phối lệch phải), phân hóa thu nhập theo loại hình trường (Public vs Private) và ngành học, mức độ rủi ro nợ nần, quỹ đạo tăng trưởng sự nghiệp, phân bổ địa lý qua bản đồ tương tác Plotly, và tỷ lệ thâm nhập AI/ML theo từng cấp bằng.
+    *   **Kiểm định phi tham số**: Sử dụng phép thử Kruskal-Wallis kiểm nghiệm sai biệt thu nhập và đo lường tương quan thống kê giữa mức độ tiếp xúc AI với thu nhập thực tế.
+    *   **Xây dựng Hệ thống ML chống rò rỉ dữ liệu (Anti-Data Leakage)**: Thiết lập pipeline tiền xử lý (SimpleImputer, StandardScaler, OneHotEncoder) và chia tập dữ liệu chặt chẽ (Train/Val/Test = 70%/15%/15%).
+        *   *Bài toán 1 (Hồi quy)*: Dự đoán thu nhập 4 năm (`median_earnings_4yr_usd`) dùng Ridge, Random Forest, Gradient Boosting, LightGBM và XGBoost.
+        *   *Bài toán 2 (Phân loại nhị phân)*: Dự đoán nguy cơ nợ cao.
+        *   *Bài toán 3 (Phân loại đa lớp)*: Phân loại quỹ đạo tăng trưởng thu nhập.
+    *   **Học sâu bảng biểu (Tabular Deep Learning)**: Thiết kế và huấn luyện mạng nơ-ron đa tầng **Tabular MLP** bằng thư viện **PyTorch** với bộ tối ưu Adam và cơ chế giảm tốc độ học động `ReduceLROnPlateau`.
+
 ---
 
 ## 🛠️ Công Nghệ & Thư Viện Sử Dụng (Tech Stack)
@@ -90,9 +114,9 @@ Dự án sử dụng ngôn ngữ **Python 3** và các thư viện chuyên sâu 
 *   **Xử lý dữ liệu**: `pandas`, `numpy`
 *   **Trực quan hóa dữ liệu**: `matplotlib`, `seaborn`, `plotly`
 *   **Kiểm định thống kê**: `scipy.stats`, `statsmodels`
-*   **Học máy & Tiền xử lý**: `scikit-learn` (StandardScaler, RobustScaler, KNNImputer, StackingClassifier, TargetEncoder, ColumnTransformer, Pipeline), `imbalanced-learn` (SMOTE)
+*   **Học máy & Tiền xử lý**: `scikit-learn` (StandardScaler, RobustScaler, KNNImputer, StackingClassifier, TargetEncoder, ColumnTransformer, Pipeline), `imbalanced-learn` (SMOTE), `pmdarima` (ARIMA)
 *   **Thuật toán Boosting mạnh mẽ**: `xgboost`, `lightgbm`
-*   **Học sâu (Deep Learning)**: `tensorflow`, `keras` (kiến trúc Stacked LSTM)
+*   **Học sâu (Deep Learning)**: `tensorflow`, `keras` (kiến trúc Stacked LSTM), `torch` (PyTorch - Tabular MLP)
 *   **Quản lý & Tải dữ liệu**: `kagglehub`, `glob`, `os`
 
 ---
@@ -121,7 +145,7 @@ Dự án sử dụng ngôn ngữ **Python 3** và các thư viện chuyên sâu 
 
 3. **Cài đặt các thư viện cần thiết**:
    ```bash
-   pip install pandas numpy matplotlib seaborn plotly scipy statsmodels scikit-learn xgboost lightgbm imbalanced-learn tensorflow notebook kagglehub
+   pip install pandas numpy matplotlib seaborn plotly scipy statsmodels scikit-learn xgboost lightgbm imbalanced-learn tensorflow notebook kagglehub pmdarima torch
    ```
 
 4. **Khởi chạy Jupyter Notebook**:
